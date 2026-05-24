@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Pakar Inspeksi Indonesia | Mechanical Electrical, Security System & Outsourcing</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="PT Pakar Inspeksi Indonesia menyediakan layanan Mechanical Electrical, Security System (CCTV & Alarm), Building Construction, Industrial PLC, Mechanical Plumbing, PLTS, Heavy Equipment Service, dan Outsourcing profesional. Hubungi tim ahli kami sekarang.">
+    <meta name="keywords" content="inspeksi teknik, electrical works, security system, CCTV, building construction, PLC, PLTS, mechanical plumbing, PT Pakar Inspeksi Indonesia">
+    <meta name="author" content="PT Pakar Inspeksi Indonesia">
+    
+    <!-- Google Fonts: Inter & Space Grotesk (Premium Industrial) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        industrial: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        brand: {
+                            accent: '#2563eb', // Modern Tech Blue
+                            accentHover: '#1d4ed8',
+                            dark: '#0a0f1d',   // Soft Deep Industrial Black
+                        }
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS Core Styling -->
+    <style>
+        /* Smooth page fade transition styling */
+        .page-transition {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .page-hidden {
+            opacity: 0;
+            transform: translateY(15px);
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+        .page-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            position: relative;
+            height: auto;
+        }
+        
+        /* Reveal animations on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism navigation panel */
+        .glass-nav {
+            background-color: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-white text-industrial-900 font-sans antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden">
+
+    <!-- PRELOADER SCREEN -->
+    <div id="preloader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-brand-dark transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <!-- Hexagonal Tech Loader Frame -->
+            <div class="relative w-24 h-24 mb-6">
+                <div class="absolute inset-0 border-t-2 border-r-2 border-brand-accent rounded-full animate-spin"></div>
+                <div class="absolute inset-2 border-b-2 border-l-2 border-industrial-400 rounded-full animate-spin" style="animation-direction: reverse;"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="font-display font-extrabold text-white text-2xl tracking-wider">PI</span>
+                </div>
+            </div>
+            <h2 class="text-white font-display font-medium tracking-[0.2em] text-sm uppercase">PT Pakar Inspeksi Indonesia</h2>
+            <div class="w-32 h-[1px] bg-industrial-800 mt-3 relative overflow-hidden">
+                <div class="absolute inset-y-0 left-0 bg-brand-accent w-1/2 animate-infinite-scroll" style="animation-duration: 1.5s;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-industrial-800/20 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20 lg:h-24 transition-all duration-300" id="header-inner">
+                <!-- Brand Logo Area -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="bg-brand-accent text-white p-2.5 rounded-sm shadow-md group-hover:bg-brand-accentHover transition-colors">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-display font-black text-xl lg:text-2xl text-white tracking-tight flex items-center">
+                            PAKAR<span class="text-brand-accent ml-1">INSPEKSI</span>
+                        </div>
+                        <span class="text-[9px] text-industrial-400 uppercase tracking-[0.25em] block font-semibold leading-none">Indonesia</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-10">
+                    <a href="#home" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Beranda</a>
+                    <a href="#tentang" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Tentang</a>
+                    <a href="#service" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Layanan</a>
+                    <a href="#kontak" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Kontak</a>
+                </nav>
+
+                <!-- Desktop Quick Actions CTA -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#kontak" class="bg-transparent border border-white/20 hover:border-brand-accent hover:bg-brand-accent text-white px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-sm transition-all duration-300">
+                        Konsultasi Gratis
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle Menu -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-brand-accent focus:outline-none transition-colors" aria-label="Toggle Menu">
+                    <i data-lucide="menu" id="hamburger-icon" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-industrial-800/40 bg-brand-dark/95 backdrop-blur-lg px-6 py-8 space-y-6 transition-all duration-300">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Beranda</a>
+                <a href="#tentang" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Tentang Kami</a>
+                <a href="#service" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Layanan</a>
+                <a href="#kontak" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Hubungi Kontak</a>
+            </div>
+            <a href="#kontak" class="block text-center bg-brand-accent hover:bg-brand-accentHover text-white py-3.5 rounded-sm font-semibold tracking-wider uppercase text-xs transition-colors shadow-lg shadow-brand-accent/20">
+                Hubungi Tim Ahli
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTAINER FOR SINGLE PAGE OPERATION -->
+    <main class="pt-20 lg:pt-0">
+
+        <!-- ========================================== -->
+        <!-- 1. HOME PAGE -->
+        <!-- ========================================== -->
+        <div id="page-home" class="page-transition page-visible">
+            
+            <!-- HERO HEROIC SECTION -->
+            <section class="relative min-h-screen bg-brand-dark flex flex-col justify-center overflow-hidden pt-12 lg:pt-0">
+                <!-- Deep Tech Structural Grid Overlays -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.18),transparent_45%)]"></div>
+                <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+                
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10 py-16 lg:py-24">
+                    <!-- Text Presentation Panel -->
+                    <div class="lg:col-span-7 flex flex-col justify-center space-y-6 text-left">
+                        <div class="inline-flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-1.5 rounded-sm self-start">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                            <span class="text-xs uppercase font-bold tracking-widest text-brand-accent font-display">BERDIRI SEJAK 2014 · PURWAKARTA, JAWA BARAT</span>
+                        </div>
+                        <h1 class="text-white font-display font-black text-4xl sm:text-5xl lg:text-[5.5rem] leading-[1.05] tracking-tight">
+                            SOLUSI <span class="text-brand-accent">ENGINEERING</span> & SECURITY TERPADU.
+                        </h1>
+                        <p class="text-industrial-300 text-lg lg:text-xl max-w-2xl font-light leading-relaxed">
+                            PT. Pakar Inspeksi Indonesia menyediakan layanan jasa konstruksi, Mechanical Electrical, Security System, Industrial PLC, serta penyediaan Sumber Daya Manusia profesional yang memudahkan operasional bisnis Anda dalam satu solusi terpadu.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <a href="#service" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm shadow-xl shadow-brand-accent/15 transition-all text-center">
+                                Telusuri Layanan Kami
+                            </a>
+                            <a href="#kontak" class="bg-transparent border border-industrial-700 hover:border-white text-white hover:text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm transition-all text-center">
+                                Hubungi Tim Ahli
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Tech Composition -->
+                    <div class="lg:col-span-5 relative w-full h-full min-h-[400px] flex items-center justify-center">
+                        <!-- Background Industrial Blueprint Frame -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent/20 to-transparent rounded-sm opacity-20 transform -rotate-3 scale-105"></div>
+                        <!-- Hero High Quality Realism Mock Image representing industrial safety inspection -->
+                        <div class="relative w-full h-[380px] lg:h-[480px] rounded-sm overflow-hidden border border-industrial-800 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Industrial Safety Officer inspecting refinery" class="w-full h-full object-cover filter brightness-95 contrast-105" onerror="this.src='https://placehold.co/600x800/1e293b/ffffff?text=Industrial+Inspection'">
+                            <!-- Overlay industrial stats indicator on top of image -->
+                            <div class="absolute bottom-6 left-6 bg-brand-dark/90 border border-brand-accent/30 backdrop-blur-md p-4 rounded-sm flex items-center space-x-3.5 shadow-lg">
+                                <div class="w-10 h-10 bg-brand-accent/20 text-brand-accent flex items-center justify-center rounded-sm">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] uppercase font-bold text-brand-accent tracking-widest leading-none mb-1">ONE CLICK SOLUTION</div>
+                                    <div class="text-xs text-white font-medium">Memudahkan Rutinitas Kerja Anda</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOGO CAROUSEL SECTION -->
+            <section class="bg-industrial-50 border-y border-industrial-200 py-12 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-6">
+                    <p class="text-center text-[10px] font-bold tracking-[0.25em] uppercase text-industrial-400">DIPERCAYA OLEH BERBAGAI PERUSAHAAN NASIONAL & MULTINASIONAL</p>
+                </div>
+                <!-- Infinite Slider Wrap -->
+                <div class="relative w-full flex overflow-x-hidden">
+                    <div class="flex space-x-16 items-center animate-infinite-scroll whitespace-nowrap">
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>WIKA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>PERTAMINA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>BANK MANDIRI</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>BNI</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>JASA MARGA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>INDOMOBIL</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>BRIDGESTONE</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>PUPUK KUJANG</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate list for infinite loop -->
+                    <div class="flex space-x-16 items-center animate-infinite-scroll whitespace-nowrap ml-16" aria-hidden="true">
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>WIKA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>PERTAMINA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>BANK MANDIRI</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>BNI</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>JASA MARGA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>INDOMOBIL</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>BRIDGESTONE</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="building-2" class="w-5 h-5 text-industrial-400"></i><span>PUPUK KUJANG</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOME BRIEF ABOUT SECTION -->
+            <section class="py-24 lg:py-32 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        <!-- Presentation Image Collage -->
+                        <div class="lg:col-span-6 relative">
+                            <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-accent/5 -z-10 rounded-sm"></div>
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200" alt="Technical Engineering Laboratory" class="w-full h-[450px] object-cover rounded-sm border border-industrial-200 shadow-xl" onerror="this.src='https://placehold.co/600x500/cbd5e1/111827?text=Electrical+Engineering'">
+                            <!-- Quality Seal Badge -->
+                            <div class="absolute -bottom-8 -right-8 bg-brand-dark text-white p-8 rounded-sm shadow-2xl max-w-xs border border-industrial-800">
+                                <h4 class="font-display font-bold text-lg mb-2 text-brand-accent">Berdiri Sejak 2014</h4>
+                                <p class="text-xs text-industrial-400 leading-relaxed">Berkomitmen memberikan solusi engineering & keamanan terpadu bagi industri dan perkantoran di seluruh Indonesia.</p>
+                            </div>
+                        </div>
+
+                        <!-- Brief Content Copy -->
+                        <div class="lg:col-span-6 flex flex-col justify-center space-y-6">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent">SIAPA KAMI</div>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-tight">
+                                Dedikasi Penuh Untuk Kemudahan & Keandalan Operasional Industri.
+                            </h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia adalah perusahaan swasta berskala nasional yang berdiri dan hadir melayani sejak tahun 2014. Berkantor pusat di Purwakarta, Jawa Barat, kami beroperasi di berbagai daerah di Indonesia dengan komitmen meningkatkan kinerja perusahaan melalui penerapan manajemen teknologi, budaya organisasi, sistem informasi, dan manajemen risiko dalam konstruksi.
+                            </p>
+                            <!-- Highlight features List -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-sm bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-900 mb-1">Teknisi Bersertifikat</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">Tim ahli berpengalaman di bidang Mechanical Electrical dan Security System.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-sm bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-900 mb-1">One Click Solution</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">Memudahkan Anda menjalankan rutinitas sehari-hari dengan satu platform terintegrasi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NUMERICAL STATISTICS SECTIONS -->
+            <section class="bg-brand-dark py-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.06),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="10">0</span><span class="text-brand-accent">+</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Tahun Pengalaman</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="9">0</span><span class="text-brand-accent">+</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Unit Bisnis Layanan</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="30">0</span><span class="text-brand-accent">+</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Klien Aktif</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="24">0</span><span class="text-brand-accent">/7</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Dukungan Teknis</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CORE SERVICES PREVIEW SECTION -->
+            <section class="py-24 lg:py-32 bg-industrial-50">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+                        <div class="max-w-2xl">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent mb-3">LAYANAN UTAMA</div>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-none">
+                                Solusi Engineering & Security Terpadu.
+                            </h2>
+                        </div>
+                        <a href="#service" class="group flex items-center space-x-2 text-brand-accent font-bold text-sm tracking-wider uppercase shrink-0 transition-all hover:text-brand-accentHover">
+                            <span>Lihat Seluruh Detail Jasa</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Service Block 1 -->
+                        <div class="bg-white border border-industrial-200 p-8 rounded-sm flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 min-h-[400px]">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-8 rounded-sm">
+                                    <i data-lucide="zap" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-xl text-industrial-950 mb-3">Electrical Works</h3>
+                                <p class="text-industrial-600 text-sm leading-relaxed mb-6">
+                                    Pemasangan dan perbaikan panel hubung tegangan menengah & rendah, cubicle, trafo, penangkal petir, lampu PJU, lift, instalasi gedung, termination kabel, genset, dan grounding.
+                                </p>
+                            </div>
+                            <a href="#service" class="text-xs font-bold uppercase tracking-wider text-industrial-900 group flex items-center space-x-1.5 hover:text-brand-accent">
+                                <span>Selengkapnya</span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Block 2 -->
+                        <div class="bg-white border border-industrial-200 p-8 rounded-sm flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 min-h-[400px]">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-8 rounded-sm">
+                                    <i data-lucide="camera" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-xl text-industrial-950 mb-3">Security System</h3>
+                                <p class="text-industrial-600 text-sm leading-relaxed mb-6">
+                                    Melayani kebutuhan pemasangan CCTV dan sistem ALARM untuk melindungi aset dan usaha Anda. Prevention. Protection. Safety — solusi keamanan terpercaya untuk industri dan komersial.
+                                </p>
+                            </div>
+                            <a href="#service" class="text-xs font-bold uppercase tracking-wider text-industrial-900 group flex items-center space-x-1.5 hover:text-brand-accent">
+                                <span>Selengkapnya</span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Block 3 -->
+                        <div class="bg-white border border-industrial-200 p-8 rounded-sm flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 min-h-[400px]">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-8 rounded-sm">
+                                    <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-xl text-industrial-950 mb-3">Building Construction</h3>
+                                <p class="text-industrial-600 text-sm leading-relaxed mb-6">
+                                    Pembangunan gedung baru, renovasi bangunan, pemasangan atap galvalum, desain eksterior & interior bangunan, pembuatan taman kota, landscape, dan lighting bangunan.
+                                </p>
+                            </div>
+                            <a href="#service" class="text-xs font-bold uppercase tracking-wider text-industrial-900 group flex items-center space-x-1.5 hover:text-brand-accent">
+                                <span>Selengkapnya</span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY CHOOSE US PRESET -->
+            <section class="py-24 lg:py-32 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        <!-- Left explanation Block -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent">KOMITMEN KAMI</div>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-tight">
+                                Mengapa Industri Memilih PT Pakar Inspeksi Indonesia?
+                            </h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Komitmen PT. Pakar Inspeksi Indonesia untuk menyelesaikan setiap karya yang dipercayakan tidak lepas dari peran setiap sumber daya insani dalam melakukan perencanaan, pelaksanaan, dan pengendalian proyek dengan pendekatan manajemen dan metode yang efektif, efisien, serta memperhatikan K3LL (Keselamatan Kesehatan Kerja dan Lingkup Lingkungan).
+                            </p>
+                            
+                            <div class="space-y-4 pt-4">
+                                <div class="flex items-start space-x-4 border-l-2 border-brand-accent pl-4">
+                                    <div>
+                                        <h4 class="font-display font-bold text-lg text-industrial-950 mb-1">Inspeksi Dini & Preventif</h4>
+                                        <p class="text-sm text-industrial-600">Menjamin keandalan dalam operasional industri dan kegiatan perkantoran dengan mengutamakan inspeksi dini, preventif, dan eksekusi yang efisien dan efektif.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 border-l-2 border-industrial-300 pl-4">
+                                    <div>
+                                        <h4 class="font-display font-bold text-lg text-industrial-950 mb-1">SDM Profesional & Bersertifikat</h4>
+                                        <p class="text-sm text-industrial-600">Membangun kerjasama dalam pengadaan Sumber Daya Manusia berikut barang dan jasa untuk ketenagalistrikan dan sistem keamanan yang profesional dan bersertifikat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Graphic Display Panel -->
+                        <div class="lg:col-span-6">
+                            <div class="relative rounded-sm overflow-hidden border border-industrial-200 shadow-xl bg-industrial-950 text-white p-8 lg:p-12 min-h-[400px] flex flex-col justify-between">
+                                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_60%)]"></div>
+                                <div>
+                                    <div class="inline-block bg-white/5 border border-white/10 text-brand-accent p-3 rounded-sm mb-6">
+                                        <i data-lucide="shield" class="w-8 h-8"></i>
+                                    </div>
+                                    <h3 class="font-display font-bold text-2xl text-white mb-4 leading-tight">Kebijakan Mutu & K3</h3>
+                                    <p class="text-industrial-400 text-sm leading-relaxed">
+                                        PT. Pakar Inspeksi Indonesia berkomitmen tinggi untuk menjamin terjaganya Kesehatan dan Keselamatan Kerja bagi karyawan, pekerja, dan pihak lain di lingkungan kantor maupun lokasi proyek, serta sungguh-sungguh mematuhi peraturan perundang-undangan tentang K3.
+                                    </p>
+                                </div>
+                                <div class="pt-8 border-t border-industrial-800 flex items-center space-x-4">
+                                    <span class="text-xs uppercase tracking-widest text-industrial-400 font-bold">LEGALITAS:</span>
+                                    <span class="text-xs bg-industrial-800 text-white px-2.5 py-1 rounded-sm border border-industrial-700 font-medium">NIB: 2007220065552</span>
+                                    <span class="text-xs bg-industrial-800 text-white px-2.5 py-1 rounded-sm border border-industrial-700 font-medium">KEMENKUNHAM 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REALISTIC TESTIMONIALS SECTION -->
+            <section class="py-24 bg-industrial-50 border-t border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="max-w-3xl mb-16">
+                        <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent mb-3">ULASAN MITRA</div>
+                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-none">
+                            Dipercaya Berbagai Perusahaan di Indonesia.
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <blockquote class="text-industrial-700 text-base italic leading-relaxed mb-6">
+                                "PT. Pakar Inspeksi Indonesia membantu kami dalam pemasangan dan perbaikan instalasi kelistrikan gedung kami. Kerjanya sangat profesional, tepat waktu, dan hasilnya memuaskan. Tim mereka memperhatikan aspek K3 dengan baik selama pengerjaan."
+                            </blockquote>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-industrial-200 overflow-hidden shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Mitra" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="font-bold text-industrial-950 text-sm">Ir. Budi Santoso, M.T.</div>
+                                    <div class="text-xs text-industrial-500">Manajer Teknik – Perusahaan Manufaktur</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <blockquote class="text-industrial-700 text-base italic leading-relaxed mb-6">
+                                "Kami menggunakan layanan security system (CCTV & Alarm) dari PT. Pakar Inspeksi Indonesia untuk melindungi aset perusahaan kami. Hasilnya sangat memuaskan, tim mereka responsif dan solusi yang diberikan sesuai kebutuhan kami."
+                            </blockquote>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-industrial-200 overflow-hidden shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Mitra" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="font-bold text-industrial-950 text-sm">Sari Dewi, S.Kom.</div>
+                                    <div class="text-xs text-industrial-500">Kepala IT & Keamanan Gedung – Retail Group</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOME CALL TO ACTION CALLOUT -->
+            <section class="bg-brand-dark py-24 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.12),transparent_40%)]"></div>
+                <div class="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8">
+                    <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+                        Siap Mewujudkan Solusi Engineering & Security untuk Bisnis Anda?
+                    </h2>
+                    <p class="text-industrial-300 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                        Konsultasikan kebutuhan Electrical Works, Security System, Building Construction, Industrial PLC, atau layanan lainnya langsung bersama tim ahli bersertifikat kami.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#kontak" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm transition-all shadow-lg shadow-brand-accent/20">
+                            Hubungi Tim Sekarang
+                        </a>
+                        <a href="#service" class="bg-transparent border border-industrial-800 hover:border-white text-industrial-300 hover:text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm transition-all">
+                            Lihat Katalog Layanan
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 2. TENTANG US PAGE -->
+        <!-- ========================================== -->
+        <div id="page-tentang" class="page-transition page-hidden">
+            
+            <!-- INNER PAGE HEADER BANNER -->
+            <section class="bg-brand-dark py-24 border-b border-industrial-900/40 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent mb-4 block">PROFIL PERUSAHAAN</span>
+                    <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+                        Tentang PT Pakar Inspeksi Indonesia
+                    </h1>
+                </div>
+            </section>
+
+            <!-- TENTANG DETAIL SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                        <!-- Brief Text Column -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <h2 class="font-display font-bold text-3xl text-industrial-950 tracking-tight leading-tight">
+                                Berperan Aktif dalam Pembangunan Indonesia Sejak 2014.
+                            </h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia merupakan perusahaan swasta berskala nasional yang berdiri dan hadir melayani sejak tahun 2014. Saat ini kami beroperasi di berbagai daerah di Indonesia dan berpusat di Purwakarta, Jawa Barat.
+                            </p>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Kepercayaan awal yang datang dari berbagai pihak (baik individu maupun lembaga) semakin menguatkan keyakinan kami untuk semakin memberikan karya di berbagai sektor industri Mechanical Electrical, Security System, PLC, dan Penyedia Sumber Daya Manusia. Kami berkomitmen meningkatkan kinerja perusahaan melalui penerapan manajemen teknologi dan memperkuat manajemen perusahaan, budaya organisasi, sistem informasi hingga manajemen risiko dalam konstruksi, demi meningkatkan kepuasan pelanggan secara nyata dengan menghasilkan karya yang berkualitas dan tepat waktu.
+                            </p>
+                        </div>
+
+                        <!-- Side Specs Column -->
+                        <div class="lg:col-span-6 bg-industrial-50 border border-industrial-200 p-8 rounded-sm space-y-8">
+                            <h3 class="font-display font-bold text-xl text-industrial-950 pb-4 border-b border-industrial-200">Informasi & Legalitas Perusahaan</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Nama Perusahaan</span>
+                                    <span class="text-industrial-900 font-bold text-right">PT. Pakar Inspeksi Indonesia</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Kantor Pusat</span>
+                                    <span class="text-industrial-900 font-bold text-right max-w-[200px]">Margasaluyu RT 01 RW 01, Desa Cisarua, Kec. Tegalwaru, Kab. Purwakarta, Jawa Barat</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">NIB</span>
+                                    <span class="text-industrial-900 font-bold text-right">2007220065552</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">KEMENKUNHAM</span>
+                                    <span class="text-industrial-900 font-bold text-right">AHU-027251.AH.01.30 Tahun 2022</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">NPWP</span>
+                                    <span class="text-industrial-900 font-bold text-right">60.300.620.6-409.000</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Website</span>
+                                    <span class="text-industrial-900 font-bold text-right">pakarinspeksiindonesia.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISI MISI & CORPORATE VALUES -->
+            <section class="py-24 bg-industrial-50 border-y border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <!-- Visi Section -->
+                        <div class="bg-white p-10 border border-industrial-200 rounded-sm shadow-sm space-y-4">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-industrial-950">Visi Kami</h3>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Menjadi group perusahaan yang memiliki manfaat dan membantu memudahkan dalam menjalankan kegiatan serta memenuhi kebutuhan hidup dengan One Click dalam penggunaan teknologi terkini dan mudah — menjadi perusahaan Mechanical Electrical, Security System, dan Outsourcing yang terbaik bagi klien.
+                            </p>
+                        </div>
+
+                        <!-- Goals Section -->
+                        <div class="bg-white p-10 border border-industrial-200 rounded-sm shadow-sm space-y-4">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="compass" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-industrial-950">Tujuan Kami</h3>
+                            <ul class="space-y-3 text-industrial-600 list-disc pl-5">
+                                <li>Menjadikan PT. Pakar Inspeksi Indonesia sebagai sarana dengan penggunaan teknologi One Click untuk mempermudah masyarakat menjalankan kegiatan rutinitasnya.</li>
+                                <li>Menjadi perusahaan Mechanical Electrical, Security System, dan Outsourcing yang profesional yang ikut membantu pemerintah dalam percepatan perekonomian Indonesia.</li>
+                                <li>Memberikan layanan prima dan solusi yang bernilai tambah kepada pelanggan.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Values Grid -->
+                    <div class="mt-20">
+                        <h3 class="font-display font-bold text-2xl text-industrial-950 text-center mb-12">Nilai-Nilai Utama Korporat</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Challenge</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Terus menantang diri sendiri untuk bertumbuh dan berkembang menghadapi setiap tantangan industri.</p>
+                            </div>
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="zap" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Speed</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Berani dan bergerak cepat — be bold and move fast dalam setiap eksekusi proyek dan layanan pelanggan.</p>
+                            </div>
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="heart" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Honesty</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Menempatkan pelanggan sebagai inti dari segalanya — put our customers at the heart of everything.</p>
+                            </div>
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="shield" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Trust</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Membangun kepercayaan dengan transparansi — build trust with transparency dalam setiap hubungan bisnis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAM SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="max-w-3xl mb-16">
+                        <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent mb-3">KLIEN & MITRA</div>
+                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-none">
+                            Dipercaya Berbagai Perusahaan Ternama.
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">WIKA</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">KFC</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">BCA</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">PERTAMINA</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">BNI</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">BRI</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">MANDIRI</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">MCDONALD'S</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">JASA MARGA</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">INDOMOBIL</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">BRIDGESTONE</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">PUPUK KUJANG</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">ASTON</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">MINISO</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">PIRELLI</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">DUNLOP</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">HOLLAND BAKERY</span>
+                        </div>
+                        <div class="bg-industrial-50 border border-industrial-200 p-4 rounded-sm flex items-center justify-center text-center">
+                            <span class="font-display font-bold text-sm text-industrial-700">RSIA MELINDA</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACCREDITATIONS & LEGALITAS -->
+            <section class="py-24 bg-industrial-50 border-t border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                        <!-- Left: Accreds grid -->
+                        <div class="lg:col-span-5 space-y-6">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent">LEGALITAS RESMI</div>
+                            <h3 class="font-display font-bold text-3xl text-industrial-950 tracking-tight leading-tight">Dokumen Legal & Identitas Perusahaan</h3>
+                            <p class="text-industrial-600 text-sm leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia beroperasi secara resmi dengan seluruh dokumen legalitas yang lengkap dan terdaftar pada instansi pemerintah yang berwenang di Indonesia.
+                            </p>
+                            <!-- Legal Badges Layout -->
+                            <div class="grid grid-cols-2 gap-4 pt-4">
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xs shrink-0">NIB</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">2007220065552</span>
+                                </div>
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-800 flex items-center justify-center font-bold text-xs shrink-0">KMK</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">KEMENKUNHAM 2022</span>
+                                </div>
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-xs shrink-0">NP</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">NPWP: 60.300.620.6</span>
+                                </div>
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-yellow-50 text-yellow-700 flex items-center justify-center font-bold text-xs shrink-0">PT</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">BADAN HUKUM RESMI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Journey timeline -->
+                        <div class="lg:col-span-7 space-y-8">
+                            <h3 class="font-display font-bold text-2xl text-industrial-950 tracking-tight">Perjalanan PT. Pakar Inspeksi Indonesia</h3>
+                            
+                            <div class="relative pl-8 border-l-2 border-industrial-200 space-y-8">
+                                <div class="relative">
+                                    <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-white"></div>
+                                    <div class="font-display font-extrabold text-lg text-brand-accent">2014</div>
+                                    <h4 class="font-bold text-sm text-industrial-950 mb-1">Pendirian Perusahaan</h4>
+                                    <p class="text-xs text-industrial-500 leading-relaxed">PT. Pakar Inspeksi Indonesia berdiri sebagai perusahaan swasta berskala nasional, berkantor pusat di Purwakarta, Jawa Barat, fokus pada layanan Electrical dan Security System.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-white"></div>
+                                    <div class="font-display font-extrabold text-lg text-brand-accent">2018</div>
+                                    <h4 class="font-bold text-sm text-industrial-950 mb-1">Ekspansi Unit Bisnis</h4>
+                                    <p class="text-xs text-industrial-500 leading-relaxed">Memperluas layanan ke Industrial PLC, Mechanical Plumbing, Heavy Equipment Service, dan PLTS (Pembangkit Listrik Tenaga Surya) untuk menjangkau lebih banyak sektor industri.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-white"></div>
+                                    <div class="font-display font-extrabold text-lg text-brand-accent">2022</div>
+                                    <h4 class="font-bold text-sm text-industrial-950 mb-1">Penguatan Legalitas & Operasional Nasional</h4>
+                                    <p class="text-xs text-industrial-500 leading-relaxed">Memperoleh legalitas resmi KEMENKUNHAM dan beroperasi di berbagai daerah di seluruh Indonesia dengan portofolio klien dari berbagai sektor industri nasional dan multinasional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 3. SERVICES PAGE -->
+        <!-- ========================================== -->
+        <div id="page-service" class="page-transition page-hidden">
+            
+            <!-- HEADER SERVICE BANNER -->
+            <section class="bg-brand-dark py-24 border-b border-industrial-900/40 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent mb-4 block">KATALOG UTAMA</span>
+                    <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+                        Layanan & Unit Bisnis Kami
+                    </h1>
+                </div>
+            </section>
+
+            <!-- FULL COMPREHENSIVE SERVICES LIST SECTION -->
+            <section class="py-24 bg-white space-y-32">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    
+                    <!-- Service 1: Electrical Works -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        <div class="lg:col-span-6 relative">
+                            <img src="https://images.unsplash.com/photo-1473876611451-a092da7e1d60?auto=format&fit=crop&q=80&w=1200" alt="Electrical Works" class="w-full h-[400px] object-cover rounded-sm border border-industrial-200 shadow-md" onerror="this.src='https://placehold.co/600x400/334155/ffffff?text=Electrical+Works'">
+                        </div>
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="font-display font-bold text-3xl text-industrial-950">Electrical Works</h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia menyediakan layanan kelistrikan lengkap untuk kebutuhan industri dan komersial. Tim teknisi bersertifikat kami siap menangani berbagai pekerjaan instalasi dan perbaikan kelistrikan.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold text-industrial-900">
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Panel Tegangan Menengah & Rendah</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Cubicle & Trafo</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Penangkal Petir & Grounding</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Instalasi Gedung & Lampu PJU</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Lift & Eskalator</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Pengadaan & Perbaikan Genset</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Security System -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center pt-24 border-t border-industrial-100">
+                        <div class="lg:col-span-6 lg:order-2 relative">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200" alt="Security System" class="w-full h-[400px] object-cover rounded-sm border border-industrial-200 shadow-md" onerror="this.src='https://placehold.co/600x400/475569/ffffff?text=Security+System'">
+                        </div>
+                        <div class="lg:col-span-6 lg:order-1 space-y-6">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="camera" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="font-display font-bold text-3xl text-industrial-950">Security System</h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia melayani pemasangan kebutuhan CCTV dan ALARM untuk melindungi aset dan usaha Anda. Prevention. Protection. Safety — solusi keamanan terpercaya dengan teknologi terkini untuk industri, komersial, dan perkantoran.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold text-industrial-900">
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Pemasangan CCTV</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Sistem Alarm Keamanan</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Monitoring & Kontrol</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Pemeliharaan Sistem Keamanan</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Building Construction -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center pt-24 border-t border-industrial-100">
+                        <div class="lg:col-span-6 relative">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1200" alt="Building Construction" class="w-full h-[400px] object-cover rounded-sm border border-industrial-200 shadow-md" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Building+Construction'">
+                        </div>
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="font-display font-bold text-3xl text-industrial-950">Building Construction</h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia bergerak dalam bidang konstruksi bangunan secara menyeluruh, dari pembangunan baru hingga renovasi dan desain, dengan mengutamakan kualitas dan ketepatan waktu pengerjaan.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold text-industrial-900">
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Pembangunan Gedung Baru</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Renovasi Bangunan</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Desain Eksterior & Interior</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Atap Galvalum & Lighting</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Taman Kota & Landscape</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Landscape Ruang Luar</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- OTHER SERVICES GRID -->
+            <section class="py-24 bg-industrial-50 border-y border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <h3 class="font-display font-bold text-2xl lg:text-3xl text-industrial-950 text-center mb-16">Layanan Lainnya</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm shadow-sm">
+                            <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-4 rounded-sm">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-industrial-950 mb-2">Industrial PLC</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Pemprograman dan sistem PLC, bidang Mikrotik, instalasi & perbaikan server, otomatisasi mesin industri, derek otomatis, sistem mesin dan robotika.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm shadow-sm">
+                            <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-4 rounded-sm">
+                                <i data-lucide="droplets" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-industrial-950 mb-2">Mechanical Plumbing</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Sistem pemanas, pendingin, ventilasi, pemadam kebakaran (hydrant), pipa & fitting, pompa, sistem gas, kontrol & otomatisasi, peralatan sanitasi.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm shadow-sm">
+                            <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-4 rounded-sm">
+                                <i data-lucide="sun" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-industrial-950 mb-2">PLTS (Solar Power)</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Pengembangan, instalasi, operasi, dan pemeliharaan sistem Pembangkit Listrik Tenaga Surya (PLTS) untuk kebutuhan industri dan komersial.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm shadow-sm">
+                            <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-4 rounded-sm">
+                                <i data-lucide="truck" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-industrial-950 mb-2">Heavy Equipment Service</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Jasa servis alat berat: Backhoe, Tower Crane, Batching Plant, Bulldozer, Diesel Hammer, Excavator, Grader, Asphalt Paver, Scraper, dan Wheel Loader.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm shadow-sm">
+                            <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-4 rounded-sm">
+                                <i data-lucide="monitor" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-industrial-950 mb-2">Electronic Service</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Pemasangan & perbaikan AC, pompa air, gerbang pintu otomatis, dan berbagai alat elektronik lainnya untuk kebutuhan komersial dan industri.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm shadow-sm">
+                            <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-4 rounded-sm">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-industrial-950 mb-2">Suppliers & Outsourcing</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Penyediaan Sumber Daya Manusia profesional berikut barang dan jasa untuk ketenagalistrikan, sistem keamanan, dan kebutuhan operasional industri.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ ACCORDION SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-4xl mx-auto px-6">
+                    <h3 class="font-display font-bold text-2xl lg:text-3xl text-industrial-950 text-center mb-12">Tanya Jawab (FAQ)</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Block 1 -->
+                        <div class="border border-industrial-200 rounded-sm overflow-hidden">
+                            <button class="faq-toggle-btn w-full px-6 py-4 bg-industrial-50 text-left font-bold text-sm lg:text-base text-industrial-950 flex justify-between items-center focus:outline-none">
+                                <span>Apa saja bidang layanan utama PT. Pakar Inspeksi Indonesia?</span>
+                                <i data-lucide="plus" class="w-4 h-4 text-industrial-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content hidden px-6 py-4 text-xs lg:text-sm text-industrial-600 border-t border-industrial-200 leading-relaxed">
+                                PT. Pakar Inspeksi Indonesia memiliki 9 unit bisnis utama: Electrical Works, Security System (CCTV & Alarm), Building Construction, Industrial PLC, Mechanical Plumbing, PLTS (Solar Power), Heavy Equipment Service, Electronic Service, dan Suppliers/Outsourcing. Kami hadir sebagai solusi engineering dan keamanan terpadu untuk industri dan komersial.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Block 2 -->
+                        <div class="border border-industrial-200 rounded-sm overflow-hidden">
+                            <button class="faq-toggle-btn w-full px-6 py-4 bg-industrial-50 text-left font-bold text-sm lg:text-base text-industrial-950 flex justify-between items-center focus:outline-none">
+                                <span>Di mana kantor pusat PT. Pakar Inspeksi Indonesia?</span>
+                                <i data-lucide="plus" class="w-4 h-4 text-industrial-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content hidden px-6 py-4 text-xs lg:text-sm text-industrial-600 border-t border-industrial-200 leading-relaxed">
+                                Kantor pusat kami berlokasi di Margasaluyu RT 01 RW 01, Desa Cisarua, Kecamatan Tegalwaru, Kabupaten Purwakarta, Jawa Barat. Namun kami beroperasi di berbagai daerah di seluruh Indonesia untuk melayani kebutuhan klien.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Block 3 -->
+                        <div class="border border-industrial-200 rounded-sm overflow-hidden">
+                            <button class="faq-toggle-btn w-full px-6 py-4 bg-industrial-50 text-left font-bold text-sm lg:text-base text-industrial-950 flex justify-between items-center focus:outline-none">
+                                <span>Bagaimana cara PT. Pakar Inspeksi Indonesia menjaga kualitas pekerjaannya?</span>
+                                <i data-lucide="plus" class="w-4 h-4 text-industrial-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content hidden px-6 py-4 text-xs lg:text-sm text-industrial-600 border-t border-industrial-200 leading-relaxed">
+                                Kami berkomitmen tinggi melalui Kebijakan Mutu dan Kebijakan K3 yang ketat. Seluruh pekerjaan dilaksanakan dengan pendekatan manajemen yang efektif dan efisien, memperhatikan K3LL (Keselamatan Kesehatan Kerja dan Lingkup Lingkungan), serta menggunakan SDM profesional dan bersertifikat di setiap bidang layanan.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 4. CONTACT PAGE -->
+        <!-- ========================================== -->
+        <div id="page-kontak" class="page-transition page-hidden">
+            
+            <!-- CONTACT HERO BANNER -->
+            <section class="bg-brand-dark py-24 border-b border-industrial-900/40 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent mb-4 block">HUBUNGI KAMI</span>
+                    <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+                        Kontak & Lokasi Kantor
+                    </h1>
+                </div>
+            </section>
+
+            <!-- CONTACT FORM & INFO SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                        
+                        <!-- Left Panel: Corporate Info Details -->
+                        <div class="lg:col-span-5 space-y-8">
+                            <h3 class="font-display font-bold text-2xl text-industrial-950">Kantor Pusat PT. Pakar Inspeksi Indonesia</h3>
+                            <p class="text-industrial-600 text-sm leading-relaxed">
+                                Tim operasional kami siap merespons setiap kebutuhan teknik, keamanan, dan konstruksi Anda. Hubungi kami melalui berbagai saluran yang tersedia.
+                            </p>
+                            
+                            <!-- Detailed info listing -->
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Alamat Kantor Pusat</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">
+                                            Margasaluyu RT 01 RW 01, Desa Cisarua, Kecamatan Tegalwaru, Kabupaten Purwakarta, Jawa Barat
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="mail" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Email Korespondensi</h4>
+                                        <p class="text-xs text-brand-accent font-semibold leading-relaxed">ptpakarinspeksiindonesia@gmail.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Telepon & WhatsApp</h4>
+                                        <p class="text-xs text-industrial-700 font-semibold leading-relaxed">+(62) 877 6073 7847</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="globe" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Website</h4>
+                                        <p class="text-xs text-industrial-700 font-semibold leading-relaxed">pakarinspeksiindonesia.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="clock" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Jam Operasional</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">Senin – Jumat: 08:00 WIB – 17:00 WIB | Sabtu: Hanya Layanan Darurat</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp Quick Action Trigger -->
+                            <div class="pt-6 border-t border-industrial-100">
+                                <a href="https://wa.me/628776073784?text=Halo%20PT.%20Pakar%20Inspeksi%20Indonesia,%20saya%20tertarik%20berkonsultasi%20mengenai%20layanan%20Anda." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 text-xs font-semibold tracking-wider uppercase rounded-sm transition-all shadow-md shadow-emerald-500/10">
+                                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                                    <span>Hubungi Cepat Via WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Interactive contact form submit sheet -->
+                        <div class="lg:col-span-7 bg-industrial-50 border border-industrial-200 p-8 lg:p-10 rounded-sm">
+                            <h3 class="font-display font-bold text-xl text-industrial-950 mb-6">Ajukan Permintaan Konsultasi</h3>
+                            
+                            <!-- Custom Modal Message Overlay -->
+                            <div id="contact-success-msg" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 p-6 rounded-sm mb-6 space-y-2">
+                                <h4 class="font-bold text-sm flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2"></i>Pesan Berhasil Terkirim</h4>
+                                <p class="text-xs text-emerald-700 leading-relaxed">Terima kasih atas pesan Anda. Tim kami akan menghubungi Anda kembali dalam kurun waktu 1x24 jam kerja.</p>
+                            </div>
+
+                            <form id="industrial-contact-form" class="space-y-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="contact-name" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Nama Lengkap *</label>
+                                        <input type="text" id="contact-name" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="contact-email" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Alamat Email *</label>
+                                        <input type="email" id="contact-email" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="contact-company" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Nama Perusahaan</label>
+                                        <input type="text" id="contact-company" class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="contact-subject" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Jenis Layanan *</label>
+                                        <select id="contact-subject" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                            <option value="">-- Pilih Jasa --</option>
+                                            <option value="Electrical Works">Electrical Works</option>
+                                            <option value="Security System">Security System (CCTV & Alarm)</option>
+                                            <option value="Building Construction">Building Construction</option>
+                                            <option value="Industrial PLC">Industrial PLC</option>
+                                            <option value="Mechanical Plumbing">Mechanical Plumbing</option>
+                                            <option value="PLTS">PLTS (Solar Power)</option>
+                                            <option value="Heavy Equipment">Heavy Equipment Service</option>
+                                            <option value="Electronic Service">Electronic Service</option>
+                                            <option value="Outsourcing">Suppliers & Outsourcing</option>
+                                            <option value="Lainnya">Lainnya / Umum</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="contact-message" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Detail Kebutuhan *</label>
+                                    <textarea id="contact-message" rows="5" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-brand-dark hover:bg-brand-accent hover:shadow-lg hover:shadow-brand-accent/15 text-white py-4 font-bold tracking-wider uppercase text-xs rounded-sm transition-all duration-300">
+                                    Kirim Permintaan Konsultasi
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAP SECTION -->
+            <section class="h-[450px] w-full bg-industrial-100 relative">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d107.44!3d-6.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698!2sPurwakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" class="w-full h-full border-0 grayscale opacity-90 filter contrast-125" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- PREMIUM MULTI-COLUMN CORPORATE FOOTER -->
+    <footer class="bg-brand-dark text-industrial-400 border-t border-industrial-900 py-16 lg:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.04),transparent_35%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-12 border-b border-industrial-900/50">
+            <!-- Col 1: Brand Info -->
+            <div class="md:col-span-4 space-y-6">
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="bg-brand-accent text-white p-2.5 rounded-sm shadow-md">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="font-display font-black text-lg text-white tracking-tight flex items-center leading-none mb-1">
+                            PAKAR<span class="text-brand-accent ml-1">INSPEKSI</span>
+                        </div>
+                        <span class="text-[8px] text-industrial-400 uppercase tracking-[0.25em] block font-semibold leading-none">Indonesia</span>
+                    </div>
+                </a>
+                <p class="text-xs text-industrial-400 leading-relaxed">
+                    PT. Pakar Inspeksi Indonesia berkomitmen menghadirkan solusi engineering dan keamanan terpadu melalui layanan Mechanical Electrical, Security System, Building Construction, Industrial PLC, dan Outsourcing profesional di seluruh Indonesia.
+                </p>
+                <!-- Social media icons -->
+                <div class="flex items-center space-x-3 pt-2">
+                    <a href="#" class="w-8 h-8 rounded-full bg-industrial-900 border border-industrial-800 text-industrial-400 hover:text-white hover:bg-brand-accent flex items-center justify-center transition-all" aria-label="LinkedIn Profile">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-industrial-900 border border-industrial-800 text-industrial-400 hover:text-white hover:bg-brand-accent flex items-center justify-center transition-all" aria-label="Instagram Profile">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-industrial-900 border border-industrial-800 text-industrial-400 hover:text-white hover:bg-brand-accent flex items-center justify-center transition-all" aria-label="YouTube Channel">
+                  
