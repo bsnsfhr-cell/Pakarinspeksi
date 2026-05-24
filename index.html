@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Pakar Inspeksi | Solusi Inspeksi Teknik & Integritas Aset Industri</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="PT Pakar Inspeksi menyediakan layanan inspeksi teknik profesional, Non-Destructive Testing (NDT), jaminan keselamatan kerja, serta sertifikasi kelaikan industri. Hubungi tim ahli kami sekarang.">
+    <meta name="keywords" content="inspeksi teknik, NDT Indonesia, uji tanpa rusak, safety inspection, sertifikasi pabrik, PT Pakar Inspeksi">
+    <meta name="author" content="PT Pakar Inspeksi">
+    
+    <!-- Google Fonts: Inter & Space Grotesk (Premium Industrial) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        industrial: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        brand: {
+                            accent: '#2563eb', // Modern Tech Blue
+                            accentHover: '#1d4ed8',
+                            dark: '#0a0f1d',   // Soft Deep Industrial Black
+                        }
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS Core Styling -->
+    <style>
+        /* Smooth page fade transition styling */
+        .page-transition {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .page-hidden {
+            opacity: 0;
+            transform: translateY(15px);
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+        .page-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            position: relative;
+            height: auto;
+        }
+        
+        /* Reveal animations on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism navigation panel */
+        .glass-nav {
+            background-color: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-white text-industrial-900 font-sans antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden">
+
+    <!-- PRELOADER SCREEN -->
+    <div id="preloader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-brand-dark transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <!-- Hexagonal Tech Loader Frame -->
+            <div class="relative w-24 h-24 mb-6">
+                <div class="absolute inset-0 border-t-2 border-r-2 border-brand-accent rounded-full animate-spin"></div>
+                <div class="absolute inset-2 border-b-2 border-l-2 border-industrial-400 rounded-full animate-spin" style="animation-direction: reverse;"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="font-display font-extrabold text-white text-2xl tracking-wider">PI</span>
+                </div>
+            </div>
+            <h2 class="text-white font-display font-medium tracking-[0.2em] text-sm uppercase">PT Pakar Inspeksi</h2>
+            <div class="w-32 h-[1px] bg-industrial-800 mt-3 relative overflow-hidden">
+                <div class="absolute inset-y-0 left-0 bg-brand-accent w-1/2 animate-infinite-scroll" style="animation-duration: 1.5s;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-industrial-800/20 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20 lg:h-24 transition-all duration-300" id="header-inner">
+                <!-- Brand Logo Area -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="bg-brand-accent text-white p-2.5 rounded-sm shadow-md group-hover:bg-brand-accentHover transition-colors">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-display font-black text-xl lg:text-2xl text-white tracking-tight flex items-center">
+                            PAKAR<span class="text-brand-accent ml-1">INSPEKSI</span>
+                        </div>
+                        <span class="text-[9px] text-industrial-400 uppercase tracking-[0.25em] block font-semibold leading-none">Engineering & Audit</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-10">
+                    <a href="#home" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Beranda</a>
+                    <a href="#tentang" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Tentang</a>
+                    <a href="#service" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Layanan</a>
+                    <a href="#kontak" class="nav-link font-medium text-sm tracking-wider uppercase text-industrial-300 hover:text-white transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-accent after:transition-all hover:after:w-full">Kontak</a>
+                </nav>
+
+                <!-- Desktop Quick Actions CTA -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#kontak" class="bg-transparent border border-white/20 hover:border-brand-accent hover:bg-brand-accent text-white px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-sm transition-all duration-300">
+                        Konsultasi Gratis
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle Menu -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-brand-accent focus:outline-none transition-colors" aria-label="Toggle Menu">
+                    <i data-lucide="menu" id="hamburger-icon" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-industrial-800/40 bg-brand-dark/95 backdrop-blur-lg px-6 py-8 space-y-6 transition-all duration-300">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Beranda</a>
+                <a href="#tentang" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Tentang Kami</a>
+                <a href="#service" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Layanan</a>
+                <a href="#kontak" class="mobile-nav-link text-lg font-medium text-industrial-300 hover:text-white py-2 block border-b border-industrial-800/30">Hubungi Kontak</a>
+            </div>
+            <a href="#kontak" class="block text-center bg-brand-accent hover:bg-brand-accentHover text-white py-3.5 rounded-sm font-semibold tracking-wider uppercase text-xs transition-colors shadow-lg shadow-brand-accent/20">
+                Hubungi Tim Ahli
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTAINER FOR SINGLE PAGE OPERATION -->
+    <main class="pt-20 lg:pt-0">
+
+        <!-- ========================================== -->
+        <!-- 1. HOME PAGE -->
+        <!-- ========================================== -->
+        <div id="page-home" class="page-transition page-visible">
+            
+            <!-- HERO HEROIC SECTION -->
+            <section class="relative min-h-screen bg-brand-dark flex flex-col justify-center overflow-hidden pt-12 lg:pt-0">
+                <!-- Deep Tech Structural Grid Overlays -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.18),transparent_45%)]"></div>
+                <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+                
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10 py-16 lg:py-24">
+                    <!-- Text Presentation Panel -->
+                    <div class="lg:col-span-7 flex flex-col justify-center space-y-6 text-left">
+                        <div class="inline-flex items-center space-x-2 bg-brand-accent/10 border border-brand-accent/20 px-3 py-1.5 rounded-sm self-start">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                            <span class="text-xs uppercase font-bold tracking-widest text-brand-accent font-display">AKREDITASI NASIONAL & INTERNASIONAL</span>
+                        </div>
+                        <h1 class="text-white font-display font-black text-4xl sm:text-5xl lg:text-[5.5rem] leading-[1.05] tracking-tight">
+                            PRESEDEN <span class="text-brand-accent">AKURASI</span> & SAFETY INDUSTRI.
+                        </h1>
+                        <p class="text-industrial-300 text-lg lg:text-xl max-w-2xl font-light leading-relaxed">
+                            Kami menyediakan jasa verifikasi kepatuhan, pengujian teknik non-destruktif berkualitas tinggi (NDT), dan rekayasa keselamatan yang menjaga stabilitas aset operasional kritis perusahaan Anda.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <a href="#service" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm shadow-xl shadow-brand-accent/15 transition-all text-center">
+                                Telusuri Layanan Kami
+                            </a>
+                            <a href="#kontak" class="bg-transparent border border-industrial-700 hover:border-white text-white hover:text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm transition-all text-center">
+                                Jadwalkan Audit Teknik
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Tech Composition -->
+                    <div class="lg:col-span-5 relative w-full h-full min-h-[400px] flex items-center justify-center">
+                        <!-- Background Industrial Blueprint Frame -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-accent/20 to-transparent rounded-sm opacity-20 transform -rotate-3 scale-105"></div>
+                        <!-- Hero High Quality Realism Mock Image representing industrial safety inspection -->
+                        <div class="relative w-full h-[380px] lg:h-[480px] rounded-sm overflow-hidden border border-industrial-800 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Industrial Safety Officer inspecting refinery" class="w-full h-full object-cover filter brightness-95 contrast-105" onerror="this.src='https://placehold.co/600x800/1e293b/ffffff?text=Industrial+Audit+Inspection'">
+                            <!-- Overlay industrial stats indicator on top of image -->
+                            <div class="absolute bottom-6 left-6 bg-brand-dark/90 border border-brand-accent/30 backdrop-blur-md p-4 rounded-sm flex items-center space-x-3.5 shadow-lg">
+                                <div class="w-10 h-10 bg-brand-accent/20 text-brand-accent flex items-center justify-center rounded-sm">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] uppercase font-bold text-brand-accent tracking-widest leading-none mb-1">REAL-TIME MONITORING</div>
+                                    <div class="text-xs text-white font-medium">Sertifikasi Akurat 100% Legal</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LOGO CAROUSEL SECTION -->
+            <section class="bg-industrial-50 border-y border-industrial-200 py-12 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-6">
+                    <p class="text-center text-[10px] font-bold tracking-[0.25em] uppercase text-industrial-400">DIPERCAYAI OLEH BUMN & MULTINASIONAL SEKTOR UTAMA</p>
+                </div>
+                <!-- Infinite Slider Wrap -->
+                <div class="relative w-full flex overflow-x-hidden">
+                    <div class="flex space-x-16 items-center animate-infinite-scroll whitespace-nowrap">
+                        <!-- MOCK INDUSTY LOGOS (Designed premium) -->
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="activity" class="w-5 h-5 text-industrial-400"></i><span>PERTAMINDO ENERGY</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="cpu" class="w-5 h-5 text-industrial-400"></i><span>NUSANTARA BAJA CORP</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="anchor" class="w-5 h-5 text-industrial-400"></i><span>DOCKYARD INDO MARITIM</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="flame" class="w-5 h-5 text-industrial-400"></i><span>GAS RAYA UTAMA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="hard-hat" class="w-5 h-5 text-industrial-400"></i><span>KONTRAKTOR UTAMA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="zap" class="w-5 h-5 text-industrial-400"></i><span>POWER GRID NUSANTARA</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate list for infinite loop -->
+                    <div class="flex space-x-16 items-center animate-infinite-scroll whitespace-nowrap ml-16" aria-hidden="true">
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="activity" class="w-5 h-5 text-industrial-400"></i><span>PERTAMINDO ENERGY</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="cpu" class="w-5 h-5 text-industrial-400"></i><span>NUSANTARA BAJA CORP</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="anchor" class="w-5 h-5 text-industrial-400"></i><span>DOCKYARD INDO MARITIM</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="flame" class="w-5 h-5 text-industrial-400"></i><span>GAS RAYA UTAMA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="hard-hat" class="w-5 h-5 text-industrial-400"></i><span>KONTRAKTOR UTAMA</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-industrial-500 font-display font-bold text-lg select-none">
+                            <i data-lucide="zap" class="w-5 h-5 text-industrial-400"></i><span>POWER GRID NUSANTARA</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOME BRIEF ABOUT SECTION -->
+            <section class="py-24 lg:py-32 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        <!-- Presentation Image Collage -->
+                        <div class="lg:col-span-6 relative">
+                            <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-accent/5 -z-10 rounded-sm"></div>
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200" alt="Technical Engineering Laboratory" class="w-full h-[450px] object-cover rounded-sm border border-industrial-200 shadow-xl" onerror="this.src='https://placehold.co/600x500/cbd5e1/111827?text=Laboratory+Engineering'">
+                            <!-- Quality Seal Badge -->
+                            <div class="absolute -bottom-8 -right-8 bg-brand-dark text-white p-8 rounded-sm shadow-2xl max-w-xs border border-industrial-800">
+                                <h4 class="font-display font-bold text-lg mb-2 text-brand-accent">Sertifikasi Kelas Dunia</h4>
+                                <p class="text-xs text-industrial-400 leading-relaxed">Akreditasi resmi untuk memberikan jaminan standar ketat terhadap fasilitas energi and manufaktur.</p>
+                            </div>
+                        </div>
+
+                        <!-- Brief Content Copy -->
+                        <div class="lg:col-span-6 flex flex-col justify-center space-y-6">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent">SIAPA KAMI</div>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-tight">
+                                Dedikasi Penuh Untuk Jaminan Integritas Struktur & Mekanikal.
+                            </h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Sejak pendirian, PT Pakar Inspeksi terus berdiri di garis terdepan dalam penyediaan layanan verifikasi pihak ketiga yang komprehensif. Melalui perpaduan kepakaran insinyur berpengalaman, peralatan digital terkalibrasi tinggi, dan metodologi berlandaskan kode referensi internasional (seperti ASME, API, AWS, ISO), kami memastikan operasional industri Anda berjalan tanpa ada toleransi kegagalan sedikit pun.
+                            </p>
+                            <!-- Highlight features List (no plain boring cards) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-sm bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-900 mb-1">Insinyur Tersertifikasi</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">Tim ahli berpengalaman dengan kualifikasi internasional.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-sm bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-900 mb-1">Akurasi Pengujian Digital</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">Menggunakan alat uji termutakhir berpresisi mikro.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NUMERICAL STATISTICS SECTIONS -->
+            <section class="bg-brand-dark py-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.06),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="15">0</span><span class="text-brand-accent">+</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Tahun Rekam Jejak</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="1200">0</span><span class="text-brand-accent">+</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Project Selesai</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="450">0</span><span class="text-brand-accent">+</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Mitra Industri Aktif</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-2 flex items-center justify-center">
+                                <span class="counter-val" data-target="24">0</span><span class="text-brand-accent">/7</span>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest text-industrial-400 font-bold">Dukungan Darurat Audit</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CORE SERVICES PREVIEW SECTION -->
+            <section class="py-24 lg:py-32 bg-industrial-50">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+                        <div class="max-w-2xl">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent mb-3">LAYANAN UTAMA</div>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-none">
+                                Pengujian & Keandalan Presisi Tinggi.
+                            </h2>
+                        </div>
+                        <a href="#service" class="group flex items-center space-x-2 text-brand-accent font-bold text-sm tracking-wider uppercase shrink-0 transition-all hover:text-brand-accentHover">
+                            <span>Lihat Seluruh Detail Jasa</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Alternate Premium Grid Showcase (Not standard boring templates) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Service Block 1 -->
+                        <div class="bg-white border border-industrial-200 p-8 rounded-sm flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 min-h-[400px]">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-8 rounded-sm">
+                                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-xl text-industrial-950 mb-3">Inspeksi Teknis & Kelaikan</h3>
+                                <p class="text-industrial-600 text-sm leading-relaxed mb-6">
+                                    Pemeriksaan berkala serta pemberian surat kelayakan (Sertifikat Layak Operasi) untuk ketel uap, bejana tekan, pesawat angkat-angkut, dan instrumen elektrikal.
+                                </p>
+                            </div>
+                            <a href="#service" class="text-xs font-bold uppercase tracking-wider text-industrial-900 group flex items-center space-x-1.5 hover:text-brand-accent">
+                                <span>Selengkapnya</span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Block 2 -->
+                        <div class="bg-white border border-industrial-200 p-8 rounded-sm flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 min-h-[400px]">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-8 rounded-sm">
+                                    <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-xl text-industrial-950 mb-3">Non-Destructive Testing (NDT)</h3>
+                                <p class="text-industrial-600 text-sm leading-relaxed mb-6">
+                                    Analisis keretakan dan korosi pipa tanpa melukai material utama, menggunakan metode tercanggih seperti Ultrasonic Testing (UT), Radiography, Eddy Current, & Dye Penetrant.
+                                </p>
+                            </div>
+                            <a href="#service" class="text-xs font-bold uppercase tracking-wider text-industrial-900 group flex items-center space-x-1.5 hover:text-brand-accent">
+                                <span>Selengkapnya</span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Block 3 -->
+                        <div class="bg-white border border-industrial-200 p-8 rounded-sm flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 min-h-[400px]">
+                            <div>
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mb-8 rounded-sm">
+                                    <i data-lucide="server" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-xl text-industrial-950 mb-3">Manajemen Integritas Aset</h3>
+                                <p class="text-industrial-600 text-sm leading-relaxed mb-6">
+                                    Strategi komprehensif guna memperpanjang siklus masa pakai mesin berat serta meminimalkan ancaman kerugian shutdown tidak terencana pada pabrik dan kilang pemurnian.
+                                </p>
+                            </div>
+                            <a href="#service" class="text-xs font-bold uppercase tracking-wider text-industrial-900 group flex items-center space-x-1.5 hover:text-brand-accent">
+                                <span>Selengkapnya</span>
+                                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY CHOOSE US PRESET -->
+            <section class="py-24 lg:py-32 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        <!-- Left explanation Block -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent">STANDAR KETAT KAMI</div>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-tight">
+                                Mengapa Industri Memilih PT Pakar Inspeksi?
+                            </h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Kami menyadari bahwa keselamatan kerja dan kepatuhan hukum bukan sesuatu yang bisa dikompromikan. Tanggung jawab kami besar dalam menjamin integritas operasional pabrik atau rig minyak tempat ratusan nyawa bergantung.
+                            </p>
+                            
+                            <!-- Detailed points blocks (No AI boring boxes) -->
+                            <div class="space-y-4 pt-4">
+                                <div class="flex items-start space-x-4 border-l-2 border-brand-accent pl-4">
+                                    <div>
+                                        <h4 class="font-display font-bold text-lg text-industrial-950 mb-1">Integritas Hasil Tanpa Bias</h4>
+                                        <p class="text-sm text-industrial-600">Seluruh laporan dan temuan inspektur kami bersifat objektif, transparan, dan tidak dapat dimanipulasi.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 border-l-2 border-industrial-300 pl-4">
+                                    <div>
+                                        <h4 class="font-display font-bold text-lg text-industrial-950 mb-1">Kecepatan Penerbitan Laporan</h4>
+                                        <p class="text-sm text-industrial-600">Proses pelaporan digital memfasilitasi penyerahan draf hasil inspeksi dalam waktu 48 jam pasca inspeksi lapangan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Graphic Display Panel -->
+                        <div class="lg:col-span-6">
+                            <div class="relative rounded-sm overflow-hidden border border-industrial-200 shadow-xl bg-industrial-950 text-white p-8 lg:p-12 min-h-[400px] flex flex-col justify-between">
+                                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_60%)]"></div>
+                                <div>
+                                    <div class="inline-block bg-white/5 border border-white/10 text-brand-accent p-3 rounded-sm mb-6">
+                                        <i data-lucide="shield" class="w-8 h-8"></i>
+                                    </div>
+                                    <h3 class="font-display font-bold text-2xl text-white mb-4 leading-tight">Aspek Hukum & Regulasi Indonesia</h3>
+                                    <p class="text-industrial-400 text-sm leading-relaxed">
+                                        Setiap laporan audit inspeksi kami dijamin sah di mata hukum kementerian ketenagakerjaan, direktorat jenderal migas, dan standar lingkungan industri terkait di Indonesia.
+                                    </p>
+                                </div>
+                                <div class="pt-8 border-t border-industrial-800 flex items-center space-x-4">
+                                    <span class="text-xs uppercase tracking-widest text-industrial-400 font-bold">SERTIFIKASI ISO:</span>
+                                    <span class="text-xs bg-industrial-800 text-white px-2.5 py-1 rounded-sm border border-industrial-700 font-medium">9001:2015</span>
+                                    <span class="text-xs bg-industrial-800 text-white px-2.5 py-1 rounded-sm border border-industrial-700 font-medium">45001:2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REALISTIC TESTIMONIALS SECTION -->
+            <section class="py-24 bg-industrial-50 border-t border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="max-w-3xl mb-16">
+                        <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent mb-3">ULASAN MITRA</div>
+                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-none">
+                            Dipercaya Pemimpin Industri Indonesia.
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <blockquote class="text-industrial-700 text-base italic leading-relaxed mb-6">
+                                "PT Pakar Inspeksi membantu kami melakukan pengujian NDT pada tangki penyimpanan kilang minyak kami. Kerjanya sangat profesional, aman, dan laporan yang diterbitkan sangat detail sehingga memudahkan kami dalam pengajuan perpanjangan izin operasi."
+                            </blockquote>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-industrial-200 overflow-hidden shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Hendra Wijaya" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="font-bold text-industrial-950 text-sm">Ir. Hendra Wijaya, M.T.</div>
+                                    <div class="text-xs text-industrial-500">Direktur Pemeliharaan Aset – Refinery Plant</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <blockquote class="text-industrial-700 text-base italic leading-relaxed mb-6">
+                                "Komitmen tim audit PT Pakar Inspeksi terhadap aspek K3 selama pengerjaan inspeksi bejana tekan di pabrik pupuk kami sangat patut diapresiasi. Presisi laporannya sangat diandalkan oleh auditor eksternal asing kami."
+                            </blockquote>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-industrial-200 overflow-hidden shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Kartika R." class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="font-bold text-industrial-950 text-sm">Kartika Rahayu, S.T.</div>
+                                    <div class="text-xs text-industrial-500">Kepala Unit HSE & Jaminan Kualitas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOME CALL TO ACTION CALLOUT -->
+            <section class="bg-brand-dark py-24 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.12),transparent_40%)]"></div>
+                <div class="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8">
+                    <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+                        Siap Mengamankan Operasional Fasilitas Industri Anda?
+                    </h2>
+                    <p class="text-industrial-300 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                        Konsultasikan kebutuhan inspeksi teknis, audit keselamatan, atau uji materi tanpa rusak (NDT) langsung bersama insinyur senior bersertifikasi kami.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#kontak" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm transition-all shadow-lg shadow-brand-accent/20">
+                            Hubungi Tim Sekarang
+                        </a>
+                        <a href="#service" class="bg-transparent border border-industrial-800 hover:border-white text-industrial-300 hover:text-white px-8 py-4 font-semibold text-sm tracking-wider uppercase rounded-sm transition-all">
+                            Lihat Katalog Solusi
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 2. TENTANG US PAGE -->
+        <!-- ========================================== -->
+        <div id="page-tentang" class="page-transition page-hidden">
+            
+            <!-- INNER PAGE HEADER BANNER -->
+            <section class="bg-brand-dark py-24 border-b border-industrial-900/40 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent mb-4 block">PROFIL PERUSAHAAN</span>
+                    <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+                        Tentang PT Pakar Inspeksi
+                    </h1>
+                </div>
+            </section>
+
+            <!-- TENTANG DETAIL SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                        <!-- Brief Text Column -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <h2 class="font-display font-bold text-3xl text-industrial-950 tracking-tight leading-tight">
+                                Dedikasi Sepenuhnya Terhadap Akurasi Pengujian & Integritas Operasi Industri.
+                            </h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                PT Pakar Inspeksi didirikan sebagai respons atas pesatnya industrialisasi di Indonesia yang menuntut standarisasi kelaikan teknis tanpa toleransi kegagalan. Kami hadir sebagai lembaga inspeksi teknis independen yang didesain untuk memberikan jaminan kredibel bagi semua pelaku industri, mulai dari pabrik manufaktur, sektor minyak dan gas, infrastruktur pelabuhan, hingga instalasi pembangkit listrik utama.
+                            </p>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Keandalan tim kami didukung oleh berbagai akreditasi resmi serta kelayakan yang divalidasi langsung oleh badan pembuat regulasi nasional. Kami memastikan setiap pengerjaan uji non-destruktif dan sertifikasi alat berat didasarkan pada ketelitian tingkat tinggi, peralatan presisi tinggi terkalibrasi berkala, serta kepatuhan penuh terhadap hukum perlindungan tenaga kerja dan kepatuhan K3.
+                            </p>
+                        </div>
+
+                        <!-- Side Specs Column -->
+                        <div class="lg:col-span-6 bg-industrial-50 border border-industrial-200 p-8 rounded-sm space-y-8">
+                            <h3 class="font-display font-bold text-xl text-industrial-950 pb-4 border-b border-industrial-200">Legalitas & Kepengurusan</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Badan Hukum</span>
+                                    <span class="text-industrial-900 font-bold text-right">PT Pakar Inspeksi Indonesia</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Izin Operasional</span>
+                                    <span class="text-industrial-900 font-bold text-right">SK Kemenaker RI / Dirjen Migas</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Akreditasi Utama</span>
+                                    <span class="text-industrial-900 font-bold text-right">KAN (Komite Akreditasi Nasional)</span>
+                                </div>
+                                <div class="flex justify-between items-start text-sm">
+                                    <span class="text-industrial-500 font-medium">Sertifikat Mutu</span>
+                                    <span class="text-industrial-900 font-bold text-right">ISO 9001, ISO 14001, ISO 45001</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISI MISI & CORPORATE VALUES -->
+            <section class="py-24 bg-industrial-50 border-y border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <!-- Visi Section -->
+                        <div class="bg-white p-10 border border-industrial-200 rounded-sm shadow-sm space-y-4">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-industrial-950">Visi Kami</h3>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Menjadi badan usaha inspeksi teknik, pengujian tanpa rusak, dan verifikasi sertifikasi industri terdepan serta paling tepercaya di Asia Tenggara, melahirkan standar tinggi bagi integritas material dan keselamatan tenaga kerja.
+                            </p>
+                        </div>
+
+                        <!-- Misi Section -->
+                        <div class="bg-white p-10 border border-industrial-200 rounded-sm shadow-sm space-y-4">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="compass" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-industrial-950">Misi Kami</h3>
+                            <ul class="space-y-3 text-industrial-600 list-disc pl-5">
+                                <li>Menghadirkan layanan inspeksi berkualitas kelas dunia bersertifikat internasional dengan integritas penuh.</li>
+                                <li>Mengembangkan kapasitas keahlian insinyur lokal melalui sertifikasi berkala dan teknologi pengujian mutakhir.</li>
+                                <li>Membantu meminimalkan kecelakaan kerja dan risiko kerugian lingkungan pada rantai pasokan industri nasional.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Values Grid -->
+                    <div class="mt-20">
+                        <h3 class="font-display font-bold text-2xl text-industrial-950 text-center mb-12">Nilai-Nilai Utama Korporat</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="shield" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Keselamatan Pertama</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Menjadikan aspek keselamatan kerja di atas segala kepentingan operasional lainnya.</p>
+                            </div>
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="target" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Akurasi Mutlak</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Setiap pengukuran, data analitik, dan kesimpulan audit diverifikasi berlapis tanpa keraguan.</p>
+                            </div>
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="heart" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Integritas Teguh</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Bebas dari segala bentuk manipulasi demi transparansi penuh laporan hasil uji pihak ketiga.</p>
+                            </div>
+                            <div class="text-center p-6 space-y-3">
+                                <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center mx-auto rounded-sm">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-industrial-950">Kualitas Prima</h4>
+                                <p class="text-xs text-industrial-500 leading-relaxed">Kami terus memperbarui kompetensi pengujian kami seiring perkembangan teknik mutakhir dunia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAM SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="max-w-3xl mb-16">
+                        <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent mb-3">EXECUTIVE LEADERSHIP</div>
+                        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-industrial-950 tracking-tight leading-none">
+                            Insinyur Senior & Manajemen Profesional.
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="space-y-4">
+                            <div class="h-[300px] overflow-hidden rounded-sm border border-industrial-200 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300" alt="Yusuf Ramadhan" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg text-industrial-950">Yusuf Ramadhan, Ph.D.</h4>
+                                <p class="text-xs text-brand-accent uppercase font-bold tracking-widest">Direktur Utama & Auditor Senior</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="h-[300px] overflow-hidden rounded-sm border border-industrial-200 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300" alt="Budi Hartono" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg text-industrial-950">Ir. Budi Hartono, M.Eng.</h4>
+                                <p class="text-xs text-brand-accent uppercase font-bold tracking-widest">Direktur Teknik & Kepala NDT</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="h-[300px] overflow-hidden rounded-sm border border-industrial-200 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=300" alt="Rizka Amelia" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg text-industrial-950">Rizka Amelia, S.T., M.Sc.</h4>
+                                <p class="text-xs text-brand-accent uppercase font-bold tracking-widest">Kepala Penjamin Mutu & K3</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="h-[300px] overflow-hidden rounded-sm border border-industrial-200 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300" alt="Aris Setiawan" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg text-industrial-950">Aris Setiawan, M.T.</h4>
+                                <p class="text-xs text-brand-accent uppercase font-bold tracking-widest">Insinyur Utama Bejana Tekan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACCREDITATIONS & TIMELINE -->
+            <section class="py-24 bg-industrial-50 border-t border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                        <!-- Left: Accreds grid (Realist logos representation) -->
+                        <div class="lg:col-span-5 space-y-6">
+                            <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-accent">AKREDITASI RESMI</div>
+                            <h3 class="font-display font-bold text-3xl text-industrial-950 tracking-tight leading-tight">Sertifikasi & Afiliasi Kompetensi Terdaftar</h3>
+                            <p class="text-industrial-600 text-sm leading-relaxed">
+                                Kami terus membina hubungan kerja sama teknis bersama asosiasi dan regulator pemerintah untuk memastikan kompetensi kami selalu relevan dengan hukum yang berlaku di Indonesia.
+                            </p>
+                            <!-- Accred Badges Layout -->
+                            <div class="grid grid-cols-2 gap-4 pt-4">
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xs shrink-0">KAN</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">KOMITE AKREDITASI NASIONAL</span>
+                                </div>
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-800 flex items-center justify-center font-bold text-xs shrink-0">ISO</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">ISO 9001, 14001, 45001</span>
+                                </div>
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-red-50 text-red-600 flex items-center justify-center font-bold text-xs shrink-0">RI</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">KEMENTERIAN TENAGA KERJA</span>
+                                </div>
+                                <div class="bg-white border border-industrial-200 p-4 rounded-sm flex items-center space-x-3 shadow-xs">
+                                    <div class="w-8 h-8 rounded-full bg-yellow-50 text-yellow-700 flex items-center justify-center font-bold text-xs shrink-0">AS</div>
+                                    <span class="text-[11px] font-bold text-industrial-950 leading-tight">MEMBER OF ASME & API</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Modern vertical timeline progress bar -->
+                        <div class="lg:col-span-7 space-y-8">
+                            <h3 class="font-display font-bold text-2xl text-industrial-950 tracking-tight">Milestone Perjalanan Kami</h3>
+                            
+                            <div class="relative pl-8 border-l-2 border-industrial-200 space-y-8">
+                                <!-- Step 1 -->
+                                <div class="relative">
+                                    <!-- Indicator circle -->
+                                    <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-white"></div>
+                                    <div class="font-display font-extrabold text-lg text-brand-accent">2012</div>
+                                    <h4 class="font-bold text-sm text-industrial-950 mb-1">Awal Pendirian Perusahaan</h4>
+                                    <p class="text-xs text-industrial-500 leading-relaxed">Berfokus pada penyedia jasa pemeriksaan K3 lokal dan kelaikan ketel uap skala menengah.</p>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="relative">
+                                    <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-white"></div>
+                                    <div class="font-display font-extrabold text-lg text-brand-accent">2017</div>
+                                    <h4 class="font-bold text-sm text-industrial-950 mb-1">Ekspansi Divisi NDT & Pipeline</h4>
+                                    <p class="text-xs text-industrial-500 leading-relaxed">Memperkenalkan metode Ultrasonic Testing canggih serta mengakuisisi sertifikasi kelaikan dari Ditjen Migas.</p>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="relative">
+                                    <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-brand-accent border-4 border-white"></div>
+                                    <div class="font-display font-extrabold text-lg text-brand-accent">2022</div>
+                                    <h4 class="font-bold text-sm text-industrial-950 mb-1">Akreditasi KAN & ISO Terpadu</h4>
+                                    <p class="text-xs text-industrial-500 leading-relaxed">Berhasil meraih sertifikat ISO komprehensif serta akreditasi resmi dari Komite Akreditasi Nasional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 3. SERVICES PAGE -->
+        <!-- ========================================== -->
+        <div id="page-service" class="page-transition page-hidden">
+            
+            <!-- HEADER SERVICE BANNER -->
+            <section class="bg-brand-dark py-24 border-b border-industrial-900/40 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent mb-4 block">KATALOG UTAMA</span>
+                    <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+                        Layanan Inspeksi & Teknik
+                    </h1>
+                </div>
+            </section>
+
+            <!-- FULL COMPREHENSIVE SERVICES LIST SECTION -->
+            <section class="py-24 bg-white space-y-32">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    
+                    <!-- Service 1: Inspeksi Teknis & Kelaikan -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                        <div class="lg:col-span-6 relative">
+                            <img src="https://images.unsplash.com/photo-1473876611451-a092da7e1d60?auto=format&fit=crop&q=80&w=1200" alt="Mechanical Inspection Service" class="w-full h-[400px] object-cover rounded-sm border border-industrial-200 shadow-md" onerror="this.src='https://placehold.co/600x400/334155/ffffff?text=Mechanical+Inspection'">
+                        </div>
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="font-display font-bold text-3xl text-industrial-950">Inspeksi Teknis & Kelaikan Alat</h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Jasa pemeriksaan teknik wajib berkala guna mengantongi izin kelayakan operasi resmi untuk keselamatan kerja. Layanan kami meliputi audit kelaikan pada ketel uap (boiler), bejana tekan (pressure vessel), tangki timbun, lift, eskalator, genset, serta seluruh instrumen kelistrikan tegangan menengah di kawasan pabrik.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold text-industrial-900">
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Ketel Uap & Bejana Tekan</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Pesawat Angkat & Angkut</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Instalasi Listrik & Petir</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Sertifikat Layak Operasi (SLO)</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Non-Destructive Testing (NDT) (Selang-seling Layout) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center pt-24 border-t border-industrial-100">
+                        <div class="lg:col-span-6 lg:order-2 relative">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200" alt="NDT Inspection Service" class="w-full h-[400px] object-cover rounded-sm border border-industrial-200 shadow-md" onerror="this.src='https://placehold.co/600x400/475569/ffffff?text=NDT+Inspection'">
+                        </div>
+                        <div class="lg:col-span-6 lg:order-1 space-y-6">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="font-display font-bold text-3xl text-industrial-950">Non-Destructive Testing (NDT)</h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Menguji tingkat keropos, ketahanan las-lasan, dan keberadaan keretakan mikro pada struktur logam tanpa merusak material utamanya. Tim kami bersertifikasi ASNT Level II & III dalam mengeksekusi metode uji modern mulai dari radiografi (X-Ray), ultrasonik (UT), pengujian serbuk magnetik (MT), dan uji penetrasi zat warna (PT).
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold text-industrial-900">
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Ultrasonic Flaw Detection (UT)</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Radiographic Testing (RT)</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Magnetic Particle Testing (MT)</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Liquid Penetrant Testing (PT)</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Manajemen Integritas Aset (Asset Integrity) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center pt-24 border-t border-industrial-100">
+                        <div class="lg:col-span-6 relative">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1200" alt="Asset Integrity Management" class="w-full h-[400px] object-cover rounded-sm border border-industrial-200 shadow-md" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Asset+Integrity'">
+                        </div>
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="w-12 h-12 bg-brand-accent/5 text-brand-accent flex items-center justify-center rounded-sm">
+                                <i data-lucide="server" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="font-display font-bold text-3xl text-industrial-950">Manajemen Integritas Aset</h2>
+                            <p class="text-industrial-600 leading-relaxed">
+                                Pendekatan holistik guna menjaga performa kelangsungan aset industri sepanjang masa operasinya. Melalui Risk-Based Inspection (RBI), pemetaan korosi komprehensif, dan analisis sisa masa pakai material (Remaining Life Assessment), kami membantu pihak manajemen memperkecil downtime yang merugikan.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold text-industrial-900">
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Risk-Based Inspection (RBI)</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Remaining Life Assessment</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Fitness For Service (FFS)</span></div>
+                                <div class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i><span>Corrosion Mapping & Analysis</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- WORKFLOW SECTION (Our modern engineering process steps) -->
+            <section class="py-24 bg-industrial-50 border-y border-industrial-200">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <h3 class="font-display font-bold text-2xl lg:text-3xl text-industrial-950 text-center mb-16">Metodologi & Alur Kerja Standar</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="absolute -top-4 left-6 bg-brand-accent text-white font-display font-extrabold text-sm w-8 h-8 rounded-full flex items-center justify-center">01</div>
+                            <h4 class="font-bold text-base text-industrial-950 mt-4 mb-2">Konsultasi Awal</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Mengkaji kelengkapan riwayat alat, regulasi rujukan yang mendasarinya, serta area cakupan audit lapangan.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="absolute -top-4 left-6 bg-brand-accent text-white font-display font-extrabold text-sm w-8 h-8 rounded-full flex items-center justify-center">02</div>
+                            <h4 class="font-bold text-base text-industrial-950 mt-4 mb-2">Inspeksi & Uji</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Pemberangkatan tim penilai ahli terakreditasi ke lokasi pabrik untuk pengumpulan data dan pengujian material.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="absolute -top-4 left-6 bg-brand-accent text-white font-display font-extrabold text-sm w-8 h-8 rounded-full flex items-center justify-center">03</div>
+                            <h4 class="font-bold text-base text-industrial-950 mt-4 mb-2">Analisis & Verifikasi</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Pengolahan data mentah di laboratorium dan verifikasi hasil temuan oleh tim supervisor senior multi-disiplin.</p>
+                        </div>
+                        <div class="bg-white p-6 border border-industrial-200 rounded-sm relative shadow-sm">
+                            <div class="absolute -top-4 left-6 bg-brand-accent text-white font-display font-extrabold text-sm w-8 h-8 rounded-full flex items-center justify-center">04</div>
+                            <h4 class="font-bold text-base text-industrial-950 mt-4 mb-2">Penerbitan Sertifikat</h4>
+                            <p class="text-xs text-industrial-500 leading-relaxed">Penyerahan laporan resmi sah hukum dan perolehan perpanjangan izin legal operasi dari otoritas terkait.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ ACCORDION SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-4xl mx-auto px-6">
+                    <h3 class="font-display font-bold text-2xl lg:text-3xl text-industrial-950 text-center mb-12">Tanya Jawab (FAQ) Inspeksi</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- FAQ Block 1 -->
+                        <div class="border border-industrial-200 rounded-sm overflow-hidden">
+                            <button class="faq-toggle-btn w-full px-6 py-4 bg-industrial-50 text-left font-bold text-sm lg:text-base text-industrial-950 flex justify-between items-center focus:outline-none">
+                                <span>Berapa lama validitas Sertifikat Layak Operasi (SLO) dari Kemenaker?</span>
+                                <i data-lucide="plus" class="w-4 h-4 text-industrial-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content hidden px-6 py-4 text-xs lg:text-sm text-industrial-600 border-t border-industrial-200 leading-relaxed">
+                                Secara umum, masa berlaku bervariasi tergantung tipe alat. Contohnya, ketel uap umumnya wajib dievaluasi kembali setiap 1 atau 2 tahun sekali, sedangkan bejana tekan dapat diperpanjang hingga jangka waktu 5 tahun tergantung hasil penilaian korosi.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Block 2 -->
+                        <div class="border border-industrial-200 rounded-sm overflow-hidden">
+                            <button class="faq-toggle-btn w-full px-6 py-4 bg-industrial-50 text-left font-bold text-sm lg:text-base text-industrial-950 flex justify-between items-center focus:outline-none">
+                                <span>Apakah pengujian NDT merusak permukaan struktur logam yang diuji?</span>
+                                <i data-lucide="plus" class="w-4 h-4 text-industrial-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content hidden px-6 py-4 text-xs lg:text-sm text-industrial-600 border-t border-industrial-200 leading-relaxed">
+                                Tidak sama sekali. Non-Destructive Testing (NDT) didesain secara spesifik untuk menganalisis cacat internal pengelasan atau retakan tanpa mengubah, memotong, ataupun menurunkan kapasitas kekuatan struktur material alat utama Anda.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Block 3 -->
+                        <div class="border border-industrial-200 rounded-sm overflow-hidden">
+                            <button class="faq-toggle-btn w-full px-6 py-4 bg-industrial-50 text-left font-bold text-sm lg:text-base text-industrial-950 flex justify-between items-center focus:outline-none">
+                                <span>Bagaimana cara PT Pakar Inspeksi menjaga kualitas laporannya?</span>
+                                <i data-lucide="plus" class="w-4 h-4 text-industrial-600 transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-content hidden px-6 py-4 text-xs lg:text-sm text-industrial-600 border-t border-industrial-200 leading-relaxed">
+                                Seluruh alat kami dikalibrasi periodik di bawah laboratorium terakreditasi ISO 17025. Terlebih lagi, setiap draf temuan lapangan wajib melalui reviu kepatuhan berjenjang oleh Supervisor Teknik Level III sebelum ditandatangani.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 4. CONTACT PAGE -->
+        <!-- ========================================== -->
+        <div id="page-kontak" class="page-transition page-hidden">
+            
+            <!-- CONTACT HERO BANNER -->
+            <section class="bg-brand-dark py-24 border-b border-industrial-900/40 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.08),transparent_50%)]"></div>
+                <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent mb-4 block">HUBUNGI KAMI</span>
+                    <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+                        Kontak & Lokasi Kantor
+                    </h1>
+                </div>
+            </section>
+
+            <!-- CONTACT FORM & INFO SECTION -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                        
+                        <!-- Left Panel: Corporate Info Details -->
+                        <div class="lg:col-span-5 space-y-8">
+                            <h3 class="font-display font-bold text-2xl text-industrial-950">Kantor Pusat PT Pakar Inspeksi</h3>
+                            <p class="text-industrial-600 text-sm leading-relaxed">
+                                Tim operasional, administrasi legalisasi sertifikat, dan pusat layanan kustomer kami siap merespons kebutuhan mendesak industri Anda kapan pun.
+                            </p>
+                            
+                            <!-- Detailed info listing -->
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Alamat Kantor</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">
+                                            Sudirman Central Business District (SCBD), Tower Premium Lt. 18, Jl. Jend. Sudirman Kav. 52-53, Jakarta Selatan, DKI Jakarta 12190
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="mail" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Email Korespondensi</h4>
+                                        <p class="text-xs text-brand-accent font-semibold leading-relaxed">info@pakarinspeksi.co.id</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Telepon & WhatsApp</h4>
+                                        <p class="text-xs text-industrial-700 font-semibold leading-relaxed">+62 (21) 5098-7711 / +62 811-1224-455</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-accent/5 text-brand-accent flex items-center justify-center shrink-0 rounded-sm">
+                                        <i data-lucide="clock" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-industrial-950 mb-1">Jam Operasional Layanan</h4>
+                                        <p class="text-xs text-industrial-500 leading-relaxed">Senin – Jumat: 08:00 WIB – 17:00 WIB | Sabtu & Minggu: Hanya Layanan Darurat Lapangan</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp Quick Action Trigger -->
+                            <div class="pt-6 border-t border-industrial-100">
+                                <a href="https://wa.me/628111224455?text=Halo%20PT%20Pakar%20Inspeksi,%20saya%20tertarik%20berkonsultasi%20mengenai%20layanan%20inspeksi." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 text-xs font-semibold tracking-wider uppercase rounded-sm transition-all shadow-md shadow-emerald-500/10">
+                                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                                    <span>Hubungi Cepat Via WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Interactive contact form submit sheet -->
+                        <div class="lg:col-span-7 bg-industrial-50 border border-industrial-200 p-8 lg:p-10 rounded-sm">
+                            <h3 class="font-display font-bold text-xl text-industrial-950 mb-6">Ajukan Permintaan Proposal Harga</h3>
+                            
+                            <!-- Custom Modal Message Overlay (Custom Alerts) -->
+                            <div id="contact-success-msg" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 p-6 rounded-sm mb-6 space-y-2">
+                                <h4 class="font-bold text-sm flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2"></i>Pesan Berhasil Terkirim</h4>
+                                <p class="text-xs text-emerald-700 leading-relaxed">Terima kasih atas pesan Anda. Tim korespondensi kami akan menghubungi Anda kembali dengan proposal dalam kurun waktu 1x24 jam kerja.</p>
+                            </div>
+
+                            <form id="industrial-contact-form" class="space-y-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="contact-name" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Nama Lengkap *</label>
+                                        <input type="text" id="contact-name" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="contact-email" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Alamat Email *</label>
+                                        <input type="email" id="contact-email" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label for="contact-company" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Nama Perusahaan</label>
+                                        <input type="text" id="contact-company" class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="contact-subject" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Subjek Kebutuhan *</label>
+                                        <select id="contact-subject" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900">
+                                            <option value="">-- Pilih Jasa --</option>
+                                            <option value="Inspeksi Teknis">Inspeksi Teknis & SLO</option>
+                                            <option value="NDT Testing">Non-Destructive Testing (NDT)</option>
+                                            <option value="Asset Integrity">Manajemen Integritas Aset</option>
+                                            <option value="Kemitraan Lainnya">Lainnya / Umum</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label for="contact-message" class="block text-xs uppercase tracking-widest font-bold text-industrial-700">Detail Pesan / Kebutuhan Alat *</label>
+                                    <textarea id="contact-message" rows="5" required class="w-full px-4 py-3 bg-white border border-industrial-200 rounded-sm focus:outline-none focus:border-brand-accent text-sm text-industrial-900"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-brand-dark hover:bg-brand-accent hover:shadow-lg hover:shadow-brand-accent/15 text-white py-4 font-bold tracking-wider uppercase text-xs rounded-sm transition-all duration-300">
+                                    Kirim Permintaan Proposal
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAP SECTION (Realistic Visual Layout Embed) -->
+            <section class="h-[450px] w-full bg-industrial-100 relative">
+                <!-- Custom elegant map placeholder using standard high-quality embed map API -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.273678071887!2d106.80932317578351!3d-6.227602360989201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f15036980001%3A0xc3991206f6e01a6b!2sSCBD!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" class="w-full h-full border-0 grayscale opacity-90 filter contrast-125" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- PREMIUM MULTI-COLUMN CORPORATE FOOTER -->
+    <footer class="bg-brand-dark text-industrial-400 border-t border-industrial-900 py-16 lg:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.04),transparent_35%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-12 border-b border-industrial-900/50">
+            <!-- Col 1: Brand Info -->
+            <div class="md:col-span-4 space-y-6">
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="bg-brand-accent text-white p-2.5 rounded-sm shadow-md">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="font-display font-black text-lg text-white tracking-tight flex items-center leading-none mb-1">
+                            PAKAR<span class="text-brand-accent ml-1">INSPEKSI</span>
+                        </div>
+                        <span class="text-[8px] text-industrial-400 uppercase tracking-[0.25em] block font-semibold leading-none">Engineering & Audit</span>
+                    </div>
+                </a>
+                <p class="text-xs text-industrial-400 leading-relaxed">
+                    PT Pakar Inspeksi berkomitmen mengawal kelancaran lini industri melalui integritas penilaian material, akurasi uji non-destruktif, dan pemenuhan izin kelayakan operasi legal nasional.
+                </p>
+                <!-- Social media icons -->
+                <div class="flex items-center space-x-3 pt-2">
+                    <a href="#" class="w-8 h-8 rounded-full bg-industrial-900 border border-industrial-800 text-industrial-400 hover:text-white hover:bg-brand-accent flex items-center justify-center transition-all" aria-label="LinkedIn Profile">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-industrial-900 border border-industrial-800 text-industrial-400 hover:text-white hover:bg-brand-accent flex items-center justify-center transition-all" aria-label="Instagram Profile">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-industrial-900 border border-industrial-800 text-industrial-400 hover:text-white hover:bg-brand-accent flex items-center justify-center transition-all" aria-label="YouTube Channel">
+                        <i data-lucide="youtube" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Navigation Links -->
+            <div class="md:col-span-3 space-y-6">
+                <h4 class="font-display font-bold text-xs uppercase tracking-widest text-white">Navigasi Bisnis</h4>
+                <ul class="space-y-3.5 text-xs">
+                    <li><a href="#home" class="hover:text-white transition-colors block">Beranda Profil</a></li>
+                    <li><a href="#tentang" class="hover:text-white transition-colors block">Mengenal Perusahaan</a></li>
+                    <li><a href="#service" class="hover:text-white transition-colors block">Layanan & Jasa Teknik</a></li>
+                    <li><a href="#kontak" class="hover:text-white transition-colors block">Hubungi Hub Kontak</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Technical Service links -->
+            <div class="md:col-span-2 space-y-6">
+                <h4 class="font-display font-bold text-xs uppercase tracking-widest text-white">Spesialisasi</h4>
+                <ul class="space-y-3.5 text-xs">
+                    <li><a href="#service" class="hover:text-white transition-colors block">Inspeksi Teknis</a></li>
+                    <li><a href="#service" class="hover:text-white transition-colors block">Sertifikat SLO</a></li>
+                    <li><a href="#service" class="hover:text-white transition-colors block">Metode NDT</a></li>
+                    <li><a href="#service" class="hover:text-white transition-colors block">Aset Integritas</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Operations Hours / Contact quick summary -->
+            <div class="md:col-span-3 space-y-6">
+                <h4 class="font-display font-bold text-xs uppercase tracking-widest text-white">Hubungi Cepat</h4>
+                <p class="text-xs text-industrial-400 leading-relaxed">
+                    Punya pertanyaan mendesak terkait sertifikasi bejana tekan atau audit K3 dalam 1-2 hari ke depan?
+                </p>
+                <div class="pt-2">
+                    <a href="#kontak" class="inline-flex items-center space-x-2 text-brand-accent hover:text-white text-xs font-bold uppercase tracking-wider">
+                        <span>Hubungi Hub Kontak Kami</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footnote copyright banner -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <p>&copy; 2026 PT Pakar Inspeksi. Seluruh hak cipta dilindungi undang-undang.</p>
+            <div class="flex items-center space-x-6 text-industrial-500">
+                <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CORE JS LOGIC ROUTER ENGINE -->
+    <script>
+        // DOM Loading sequence
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 700);
+            }, 500);
+
+            // Trigger visual lucide system icons rendering
+            lucide.createIcons();
+        });
+
+        // SINGLE PAGE ROUTING SYSTEM
+        const validPages = ['home', 'tentang', 'service', 'kontak'];
+        
+        function handleNavigation() {
+            let currentHash = window.location.hash.substring(1);
+            if (!validPages.includes(currentHash)) {
+                currentHash = 'home';
+            }
+
+            // Hide all pages, display active page
+            validPages.forEach(page => {
+                const element = document.getElementById(`page-${page}`);
+                if (page === currentHash) {
+                    element.classList.remove('page-hidden');
+                    element.classList.add('page-visible');
+                } else {
+                    element.classList.remove('page-visible');
+                    element.classList.add('page-hidden');
+                }
+            });
+
+            // Update Nav links focus UI representation state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const targetHash = link.getAttribute('href').substring(1);
+                if (targetHash === currentHash) {
+                    link.classList.remove('text-industrial-300');
+                    link.classList.add('text-white');
+                    link.classList.add('after:w-full');
+                } else {
+                    link.classList.add('text-industrial-300');
+                    link.classList.remove('text-white');
+                    link.classList.remove('after:w-full');
+                }
+            });
+
+            // Smooth Scroll back up to clean transition start
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Close Mobile Dropdown if it was left open
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            mobileMenu.classList.add('hidden');
+            hamburgerIcon.setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+            
+            // Re-trigger visual Intersection Observer check for scroll elements on load of page
+            setTimeout(handleScrollAnimations, 100);
+        }
+
+        // Router triggers
+        window.addEventListener('hashchange', handleNavigation);
+        window.addEventListener('DOMContentLoaded', handleNavigation);
+
+        // Header shrinking dynamic transparency effect on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            const headerInner = document.getElementById('header-inner');
+            if (window.scrollY > 40) {
+                header.classList.add('bg-brand-dark/95', 'py-1', 'shadow-lg');
+                headerInner.classList.remove('h-24');
+                headerInner.classList.add('h-20');
+            } else {
+                header.classList.remove('bg-brand-dark/95', 'py-1', 'shadow-lg');
+                headerInner.classList.remove('h-20');
+                headerInner.classList.add('h-24');
+            }
+        });
+
+        // MOBILE DRAWER MENUBAR INTERACTIVITY
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpened = !mobileMenu.classList.contains('hidden');
+            if (isOpened) {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                hamburgerIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // SCROLL REVEAL ANIMATIONS (Intersection Observer)
+        function handleScrollAnimations() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            reveals.forEach(reveal => {
+                observer.observe(reveal);
+            });
+        }
+
+        // Apply reveal classes automatically to various sub sections for modular maintainability
+        document.querySelectorAll('section').forEach(sect => {
+            if (!sect.classList.contains('relative') || sect.id === 'preloader') {
+                sect.classList.add('reveal');
+            }
+        });
+        
+        // COUNTER ANIMATIONS WIDGET
+        const statCounters = document.querySelectorAll('.counter-val');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+                    let count = 0;
+                    const speed = target / 60; // speed parameter relative to value
+
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = Math.floor(count);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statCounters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // FAQ COLLAPSIBLE TOGGLES
+        const faqButtons = document.querySelectorAll('.faq-toggle-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpened = !content.classList.contains('hidden');
+                
+                // Reset all other faqs for exclusive expand presentation
+                faqButtons.forEach(otherBtn => {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    otherBtn.querySelector('i').setAttribute('data-lucide', 'plus');
+                });
+
+                if (isOpened) {
+                    content.classList.add('hidden');
+                    icon.setAttribute('data-lucide', 'plus');
+                } else {
+                    content.classList.remove('hidden');
+                    icon.setAttribute('data-lucide', 'minus');
+                }
+                lucide.createIcons();
+            });
+        });
+
+        // CONTACT FORM CLIENT-SIDE LOGIC
+        const contactForm = document.getElementById('industrial-contact-form');
+        const successMsg = document.getElementById('contact-success-msg');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Show custom successful submission panel
+                successMsg.classList.remove('hidden');
+                
+                // Reset form inputs
+                contactForm.reset();
+
+                // Smooth scroll up to success panel position
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+    </script>
+</body>
+                          </html>
