@@ -762,7 +762,17 @@
     transition: opacity .25s;
   }
   .gallery-item:hover .gallery-item-label { opacity: 1; }
-
+   .gallery-item {
+  position: relative;
+}
+.gallery-item img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
   /* ===== CTA ===== */
   #cta {
     background: var(--red);
@@ -1521,38 +1531,47 @@
       <div class="divider"></div>
     </div>
     <div class="gallery-grid">
+
       <div class="gallery-item large reveal">
-        <span>⚡</span>
+        <img src="gallery1.jpg" alt="Panel Electrical Works" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Panel Electrical Works</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.1s">
-        <span>📹</span>
+        <img src="gallery2.jpg" alt="CCTV Security System" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">CCTV Security System</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.2s">
-        <span>🔧</span>
+        <img src="gallery3.jpg" alt="Perbaikan Trafo" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Perbaikan Trafo</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.1s">
-        <span>🏗️</span>
+        <img src="gallery4.jpg" alt="Building Construction" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Building Construction</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.2s">
-        <span>🤖</span>
+        <img src="gallery5.jpg" alt="Industrial PLC System" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Industrial PLC System</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.3s">
-        <span>🚜</span>
+        <img src="gallery6.jpg" alt="Heavy Equipment" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Heavy Equipment</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.1s">
-        <span>💧</span>
+        <img src="gallery7.jpg" alt="Mechanical Plumbing" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Mechanical Plumbing</div>
       </div>
+
       <div class="gallery-item reveal" style="transition-delay:.2s">
-        <span>👷</span>
+        <img src="gallery8.jpg" alt="Tim Profesional" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
         <div class="gallery-item-label">Tim Profesional</div>
       </div>
+
     </div>
   </div>
 </section>
